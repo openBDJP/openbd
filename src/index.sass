@@ -1,0 +1,85 @@
+@charset "utf-8"
+// 変数
+$width: 1266px
+$blue: #0027FF
+$black: #101010
+
+=mobile
+  @media screen and (max-width: 768px)
+    @content
+
+=tablet
+  @media screen and (max-width: 992px)
+    @content
+
+=pc
+  @media screen and (max-width: 1180px)
+    @content
+
+=ie10
+  @media all and (-ms-high-contrast:none)
+    @content
+  
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  font-feature-settings: "pkna" 1
+html
+body
+  background-color: #ffffff
+  margin: 0
+  font-size: 1.2rem
+  font-family: "Hiragino Sans", sans-serif
+  -webkit-font-smoothing: antialiased
+  border-top: 10px solid $blue
+  #container
+    max-width: 1300px
+    margin-left: auto
+    margin-right: auto
+    margin-top: 100px
+    display: flex
+    nav
+      ul
+        list-style: none
+        width: 216px
+        margin: 0 30px
+        padding: 0
+        li
+          margin: 10px 0
+          a
+            font-family: "M PLUS 1p"
+            display: block
+            padding: 10px
+            text-decoration: none
+            color: $blue
+            font-size: 0.9rem
+            font-weight: bold
+            transition: 0.2s ease all
+            &:hover
+              background-color: #0027FF47
+              border-radius: 5px
+            &.active
+              background-color: $blue
+              color: #ffffff
+              border-radius: 5px
+    main
+        max-width: 1030px
+        padding: 0 150px
+        header
+          h2
+            font-size: 1rem
+            color: $blue
+        section
+          margin: 100px 0
+          article
+            h1
+              font-weight: 400
+              font-size: 1.8rem
+              font-family: "M PLUS 1p"
+              padding: 20px 0
+            p
+              font-size: 1.1rem
+              line-height: 2
+              letter-spacing: 1px
+              font-weight: bold    
