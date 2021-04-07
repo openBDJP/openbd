@@ -7,24 +7,7 @@ head
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=M+PLUS+1p:700&display=swap")
 
 body#index
-    header
-        h1 openBD
-        nav
-            ul
-                li
-                    a.active(href="") はじめに
-                li
-                    a(href="") API仕様
-                li
-                    a(href="") 利用規約
-                li
-                    a(href="") よくある質問
-                li
-                    a(href="") 各種資料
-        .language
-            a.active(href="") JP
-            span /
-            a(href="") EN
+    include header.pug
     main
         article
             section
@@ -36,7 +19,7 @@ body#index
             section
                 h2 新着書誌
 
-            section
+            section#introduction
                 h2 なぜopenBDか？
 
                 h3 パフォーマンス
@@ -48,7 +31,7 @@ body#index
                 h3 生産性
                 p 私たちopenBDプロジェクト（カーリル・版元ドットコム）は書誌情報・書影を、だれでも自由に使える、高速なAPIで提供します。
 
-            section.api
+            section#api
                 h2 API仕様  
                 ul
                     li 書誌情報1件あたり1ミリ秒以下での応答（超高速）
@@ -82,7 +65,7 @@ body#index
                     li 個別の書誌・書影情報について、openBDプロジェクトからの削除要請があった場合には、速やかにそれに従うものとします。
                     li openBD APIから得られたデータを、任意に改変してはいけません。不具合の報告や改善の提案は歓迎します。
 
-            section
+            section#materials
                 h2 各種資料
 
     footer
