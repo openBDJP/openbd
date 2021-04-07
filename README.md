@@ -12,4 +12,4 @@ npm start
 URL（masterコミットでデプロイ）
 - https://openbdjp.github.io/openbd/
 
--- コミットすると自動的にデプロイされる
+- コミットすると自動的にデプロイされる
