@@ -1,7 +1,7 @@
 {
-  "name": "openBD",
+  "name": "template",
   "version": "1.0.0",
-  "description": "openBDサイト",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "run-s clean build:sass build:autoprefixer build:copy:assets build:copy:js watch",

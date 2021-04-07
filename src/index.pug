@@ -6,14 +6,9 @@ head
   link(rel="stylesheet", href="./index.css")
   link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=M+PLUS+1p:700&display=swap")
 
-body
-    .line
-    .language
-        img(src="assets/earth.svg", alt="select language")
-        a.active(href="") JP
-        span /
-        a(href="") EN
-    #container
+body#index
+    header
+        h1 openBD
         nav
             ul
                 li
@@ -23,84 +18,87 @@ body
                 li
                     a(href="") 利用規約
                 li
-                    a(href="") 活用事例
+                    a(href="") よくある質問
                 li
-                    a(href="") お問い合わせ
-        main
-            header
-                img(src="assets/logo@2x.png", alt="openBD", width="389")
-                h2
-                    | 書誌情報・書影をだれでも自由に使える、高速なAPI
+                    a(href="") 各種資料
+        .language
+            a.active(href="") JP
+            span /
+            a(href="") EN
+    main
+        article
+            section
+                h2 書誌情報・書影を自由に
+                p 私たちopenBDプロジェクトは書誌情報・書影を、だれでも自由に使える、高速なAPIで提供します。
+                a(href="") API仕様
+                a(href="") APIデバッガー
+                a(href="") ライブテスト
+            section
+                h2 新着書誌
 
             section
-                article
-                    h1 はじめに
-                    p
-                        | 私たちopenBDプロジェクト（カーリル・版元ドットコム）は書誌情報・書影を、だれでも自由に使える、高速なAPIで提供します。
-                    ul
-                        li
-                            | 個人が、SNSやブログで本を紹介するとき
-                        li
-                            | 書店が、仕入れや、販売のために本を紹介するとき
-                        li
-                            | 図書館が、選書し、利用者に本を紹介するとき
-                        li
-                            | メディアが、本を紹介し評するとき
-                        li
-                            | 企業が、書誌情報・書影を利用したあらたなサービスを開発するとき
-                    p
-                        | こうしたときに、自由に使える書誌情報・書影を、高速なAPIで提供するopenBDの提供を開始します。
-                        | オープンな本のデータが、本の世界をますます豊かにすると考えるからです。
-                    h2 APIの開発
-                    p
-                        | openBDは、
-                        a(href="https://calil.jp/") カーリル
-                        | がAPIシステムを開発します。
-                        | カーリルは、図書館蔵書・貸出情報を横断的に高速で検索するサイトを提供しています。
-                        | ここで培ったノウハウを活用します。
+                h2 なぜopenBDか？
 
-                    h2 書誌・書影の収集
-                    p
-                        | openBDに掲載する書誌情報・書影は
-                        a(href="https://www.hanmoto.com/") 版元ドットコム
-                        | が収集します。
-                        | 版元ドットコムは、会員出版社229社のつくった本の書誌情報・書影をネット上で公開し、書店・取次などに送り届けるシステムをつくる出版社団体です。
-                        | さらに会員出版社だけでなく、大手から中小出版社まで、24,747社の約76万タイトルの本の書誌情報、書影、ためし読み、書評掲載情報などをあつめてサイトやAPIで提供しています。
-                        | 提供のために、出版社・出版業界・国立国会図書館などからの収集の蓄積を活用して取組みます。
+                h3 パフォーマンス
+                p 私たちopenBDプロジェクト（カーリル・版元ドットコム）は書誌情報・書影を、だれでも自由に使える、高速なAPIで提供します。
+
+                h3 信頼性
+                p 私たちopenBDプロジェクト（カーリル・版元ドットコム）は書誌情報・書影を、だれでも自由に使える、高速なAPIで提供します。
+
+                h3 生産性
+                p 私たちopenBDプロジェクト（カーリル・版元ドットコム）は書誌情報・書影を、だれでも自由に使える、高速なAPIで提供します。
+
+            section.api
+                h2 API仕様  
+                ul
+                    li 書誌情報1件あたり1ミリ秒以下での応答（超高速）
+                    li 全件取得やデータ同期を推奨するAPI設計（大量アクセス対応）
+                    li 国内の複数データセンターにエッジサーバーを展開（さくらインターネット・AWS・GCPに順次展開予定）
+                    li 複数のCDNサービスに対応した書影情報の配信
+                    li 大規模サービス向けにキャッシュサーバーをオープンソース化                    
+                h2 書誌情報の取得
+                    span GET
+                a.endpoint(href="") /get?isbn=ISBN,ISBN
+                a.doc(href="") データ仕様書はこちら
+                h2 収録範囲の取得
+                    span GET
+                a.endpoint(href="") /coverage
+                h2 JSONスキーマの取得
+                    span GET
+                a.endpoint(href="") /schema
+
             section
-                article.api
-                    h1 API仕様書  
-                    ul
-                        li 書誌情報1件あたり1ミリ秒以下での応答（超高速）
-                        li 全件取得やデータ同期を推奨するAPI設計（大量アクセス対応）
-                        li 国内の複数データセンターにエッジサーバーを展開（さくらインターネット・AWS・GCPに順次展開予定）
-                        li 複数のCDNサービスに対応した書影情報の配信
-                        li 大規模サービス向けにキャッシュサーバーをオープンソース化                    
-                    h2 書誌情報の取得
-                        span GET
-                    a.endpoint(href="") /get?isbn=ISBN,ISBN
-                    a.doc(href="") データ仕様書はこちら
-                    h2 収録範囲の取得
-                        span GET
-                    a.endpoint(href="") /coverage
-                    h2 JSONスキーマの取得
-                        span GET
-                    a.endpoint(href="") /schema
-                    
+                h2 openBDの活用事例
+                p 私たちopenBDプロジェクト（カーリル・版元ドットコム）は書誌情報・書影を、だれでも自由に使える、高速なAPIで提供します。個人が、SNSやブログで本を紹介するとき書店が、仕入れや、販売のために本を紹介するとき図書館が、選書し、利用者に本を紹介するときメディアが、本を紹介し評するとき
+
+
             section
-                article
-                    h1 利用規約
-                    ul
-                        li openBD APIが提供するのはデータの「利用権」です。
-                        li openBD APIが提供する書誌・書影・内容紹介・書評情報などすべての情報は、本の販促・紹介目的に限り使用できます。個人・団体・企業を問いません。
-                        li 提供するデータには近刊情報が含まれますから書誌の内容や書影が時間とともに変更・修正、さらには削除される可能性があります。利用側の事情で書誌データをキャッシュする場合は、データの変更をできるだけ早く反映するようにしてください。
-                        li 個別の書誌・書影情報について、openBDプロジェクトからの削除要請があった場合には、速やかにそれに従うものとします。
-                        li openBD APIから得られたデータを、任意に改変してはいけません。不具合の報告や改善の提案は歓迎します。
+                h2 ガイドライン・利用規約
+                a(href="") 利用規約はこちら
+                ul
+                    li openBD APIが提供するのはデータの「利用権」です。
+                    li openBD APIが提供する書誌・書影・内容紹介・書評情報などすべての情報は、本の販促・紹介目的に限り使用できます。個人・団体・企業を問いません。
+                    li 提供するデータには近刊情報が含まれますから書誌の内容や書影が時間とともに変更・修正、さらには削除される可能性があります。利用側の事情で書誌データをキャッシュする場合は、データの変更をできるだけ早く反映するようにしてください。
+                    li 個別の書誌・書影情報について、openBDプロジェクトからの削除要請があった場合には、速やかにそれに従うものとします。
+                    li openBD APIから得られたデータを、任意に改変してはいけません。不具合の報告や改善の提案は歓迎します。
+
             section
-                article
-                    h1 運営
-                        .logo
-                            a(href="")
-                                img(src="assets/logo-hanmoto.svg", alt="版元ドットコム")
-                            a(href="")
-                                img(src="assets/logo-calil.svg", alt="カーリル")
+                h2 各種資料
+
+    footer
+        h2 openBDプロジェクト
+        p お問い合わせ
+            a(href="") info@openbd.jp
+        a(href="")
+            //- img(src="assets/logo-hanmoto.svg", alt="版元ドットコム")
+            p 
+                | 株式会社カーリル
+                br
+                | 岐阜県中津川市坂下1645-15
+
+        a(href="")
+            //- img(src="assets/logo-calil.svg", alt="カーリル")
+            p
+                | 版元ドットコム
+                br
+                | 東京都渋谷区神宮前2-33-18-303
