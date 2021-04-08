@@ -1,8 +1,79 @@
 #index
     main
         article
+            section
+                max-width: 92%
+                margin: 0 auto
+                margin-bottom: 3.25625rem
+                > h2
+                    display: inline-block
+                    color: #101010
+                    font-size: 1.5625rem
+                    line-height: 2.625rem
+                    border-bottom: 6px solid #d8ff00
+                    padding-bottom: 0.86875rem
+                    margin-bottom: 1.09375rem
+
             section#hero
+                display: flex
+                margin: 3rem auto
+                > div
+                    flex: 1
+                h2
+                    color: #101010
+                    font-size: 2.4375rem
+                    font-weight: normal
+                    letter-spacing: 0.22rem
+                    margin-bottom: 2.94375rem
+                    
+                p
+                    font-size: 1.25rem
+                    line-height: 2.625rem
+                > div:nth-child(2)
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    flex-direction: column
+                    a.button
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 320px
+                        height: 88px
+                        border-radius: 17px
+                        background: #00aaf5
+                        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16)
+
+                        color: #ffffff
+                        font-weight: bold
+                        font-size: 1.4375rem
+                        text-align: center
+                        margin-bottom: 1.875rem
+                    > div
+                        display: flex
+                        a
+                            font-size: 0.9375rem
+                            text-align: center
+                            color: #00aaf5
+                            &:first-child
+                                margin-right: 1.125rem
+
             section#introduction
+                h2
+                    margin-bottom: 5.93125rem
+                > div
+                    display: flex
+                    div:nth-child(2)
+                        margin: 0 3.55rem
+                    h3
+                        color: #101010
+                        font-size: 1.5625rem
+                        line-height: 2.625rem
+                    p
+                        color: #101010
+                        font-size: 0.9375rem
+                        line-height: 2rem
+
             section#api
             section#case
             section#tos
