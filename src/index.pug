@@ -49,16 +49,17 @@ body#index
                     li 国内の複数データセンターにエッジサーバーを展開（さくらインターネット・AWS・GCPに順次展開予定）
                     li 複数のCDNサービスに対応した書影情報の配信
                     li 大規模サービス向けにキャッシュサーバーをオープンソース化                    
-                h2 書誌情報の取得
+                h3 書誌情報の取得
                     span GET
-                a.endpoint(href="") /get?isbn=ISBN,ISBN
-                a.doc(href="") データ仕様書はこちら
-                h2 収録範囲の取得
+                a.endpoint(href="https://api.openbd.jp/v1/get?isbn=978-4-7808-0204-7&pretty") /get?isbn=ISBN,ISBN
+                br
+                a.doc(href="https://openbd.jp/spec/") データ仕様書はこちら
+                h3 収録範囲の取得
                     span GET
-                a.endpoint(href="") /coverage
-                h2 JSONスキーマの取得
+                a.endpoint(href="https://api.openbd.jp/v1/coverage") /coverage
+                h3 JSONスキーマの取得
                     span GET
-                a.endpoint(href="") /schema
+                a.endpoint(href="https://api.openbd.jp/v1/schema?pretty") /schema
 
             section#case
                 h2 openBDの活用事例
@@ -67,7 +68,7 @@ body#index
 
             section#tos
                 h2 ガイドライン・利用規約
-                a(href="") 利用規約はこちら
+                a.button(href="") 利用規約はこちら
                 ul
                     li openBD APIが提供するのはデータの「利用権」です。
                     li openBD APIが提供する書誌・書影・内容紹介・書評情報などすべての情報は、本の販促・紹介目的に限り使用できます。個人・団体・企業を問いません。
