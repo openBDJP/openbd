@@ -1,6 +1,6 @@
 import React, { Component, ReactComponentElement } from 'react';
 import Hiradumi from 'hiradumi';
-// import Hiradumi from '../../hiradumi/lib/Hiradumi';
+// import Hiradumi from '../../hiradumi/lib/module';
 import Book from './Book';
 
 import items from '../Gifu_Nakatsugawa_plus.json';
