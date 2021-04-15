@@ -5,7 +5,7 @@ export default class item extends Component {
         super(props);
     }
     onClick() {
-        window.open('https://calil.jp/book/' + this.props.item.isbn, '_parent');
+        window.open('https://calil.jp/book/' + this.props.item.isbn, '_blank');
     }
     render() {
         const item = this.props.item
