@@ -10,6 +10,6 @@ npm start
 ## デプロイ
 
 デバッグURL（masterコミットでデプロイ）
-- https://openbdjp.github.io/openbd/
+- https://openbdjp.github.io/openbd-web/
 
 - コミットすると自動的にデプロイされる
