@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "run-s clean build:sass build:copy:assets build:copy:js watch",
+    "start": "run-s clean build:sass build:ts build:copy:assets watch",
     "clean": "rimraf build",
     "watch": "concurrently \"npm run watch:pug\" \"npm run watch:sass\" \"npm run watch:ts\" \"npm run watch:browser-sync\"",
     "watch:browser-sync": "browser-sync start --config ./bs-config.js",
@@ -17,7 +17,6 @@
     "build:pug": "pug -O pug_env.js src/ --out ./build/",
     "build:ts": "esbuild ./src/index.tsx --outfile=./build/index.js --bundle --minify --sourcemap --define:process.env.NODE_ENV='\"production\"'",
     "build:copy:assets": "cpx \"src/assets/**/*\" build/assets/",
-    "build:copy:js": "cpx \"src/js/**/*\" build/js/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx npm-force-resolutions"
   },
@@ -47,6 +46,7 @@
     "chokidar-cli": "^2.1.0",
     "clean": "^4.0.2",
     "concurrently": "^5.1.0",
+    "core-js": "^3.10.0",
     "cpx": "^1.5.0",
     "esbuild": "^0.8.57",
     "eslint": "^7.9.0",

@@ -1,0 +1,51 @@
+.row
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    .book
+        box-sizing: border-box
+        animation: fadeIn 1s ease 0s 1 normal
+        overflow: hidden
+        // coverなしの表示
+        &.nocover
+        border: 1px solid #eeeeee
+        .bg
+            position: absolute
+            background-color: #eeeeee
+            width: 80%
+            height: 100%
+            top: 0
+            left: 10%
+            z-index: -1
+        .textCover
+            position: relative
+            height: 100%
+            width: 100%
+            padding: 30% 0 0
+            .title
+                position: relative
+                width: 90%
+                margin: 0 auto
+                color: #333333
+                font-weight: bold
+                margin-bottom: 5px
+                line-height: 120%
+                z-index: 1
+                word-wrap: break-word
+                overflow-wrap: break-word
+            .author
+                position: relative
+                width: 90%
+                margin: 0 auto
+                font-size: 80%
+                color: #EE0000
+                font-weight: bold
+                z-index: 1
+
+@keyframes fadeIn
+    0%
+        opacity: 0
+
+    100%
+        opacity: 1
+
