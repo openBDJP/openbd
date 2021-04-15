@@ -27,8 +27,8 @@ class App extends Component<Props, State> {
       items: items,
       size: 200,
       width: 100,
-      margin: 10,
-      rowCount: 10,
+      margin: 5,
+      rowCount: 5,
       rowFactors: null
     }
     this.hiradumi = null;
