@@ -18,7 +18,7 @@
     "build:ts": "esbuild ./src/index.tsx --outfile=./build/index.js --bundle --minify --sourcemap --define:process.env.NODE_ENV='\"production\"'",
     "build:copy:assets": "cpx \"src/assets/**/*\" build/assets/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "npx npm-force-resolutions"
+    "//preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -43,16 +43,15 @@
     "@typescript-eslint/parser": "^4.1.1",
     "autoprefixer": "^9.7.5",
     "browser-sync": "^2.26.12",
-    "chokidar": "^3.5.1",
     "clean": "^4.0.2",
     "concurrently": "^5.1.0",
-    "cpx": "^1.2.1",
+    "cpx": "^1.5.0",
     "esbuild": "^0.8.57",
     "eslint": "^7.9.0",
     "npm-force-resolutions": "^0.0.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.27",
-    "postcss-cli": "^8.3.1",
+    "postcss-cli": "^6.1.3",
     "postcss-scss": "^2.0.0",
     "pug": "^3.0.1",
     "pug-cli": "github:pugjs/pug-cli#master",
@@ -63,7 +62,6 @@
   "resolutions": {
     "minimist": ">=1.2.5",
     "acorn": "^5.7.4",
-    "braces": "^2.3.1",
-    "chokidar": "^3.5.1"
+    "braces": "^2.3.1"
   }
 }
