@@ -13,3 +13,5 @@ npm start
 - https://openbdjp.github.io/openbd-web/
 
 - コミットすると自動的にデプロイされる
+
+- GitHub ActionsはMac OSで走る
