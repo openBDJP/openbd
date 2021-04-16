@@ -9,7 +9,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          npm install
+          npm install --no-optional
           npm run build
 
       - name: Deploy 🚀
