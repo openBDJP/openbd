@@ -18,7 +18,7 @@
     "build:ts": "esbuild ./src/index.tsx --outfile=./build/index.js --bundle --minify --sourcemap --define:process.env.NODE_ENV='\"production\"'",
     "build:copy:assets": "cpx \"src/assets/**/*\" build/assets/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "//preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
@@ -43,6 +43,7 @@
     "@typescript-eslint/parser": "^4.1.1",
     "autoprefixer": "^9.7.5",
     "browser-sync": "^2.26.12",
+    "chokidar": "^3.5.1",
     "clean": "^4.0.2",
     "concurrently": "^5.1.0",
     "cpx": "^1.5.0",
@@ -62,6 +63,7 @@
   "resolutions": {
     "minimist": ">=1.2.5",
     "acorn": "^5.7.4",
-    "braces": "^2.3.1"
+    "braces": "^2.3.1",
+    "chokidar": "^3.5.1"
   }
 }
