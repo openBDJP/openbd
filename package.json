@@ -18,7 +18,7 @@
     "build:ts": "esbuild ./src/index.tsx --outfile=./build/index.js --bundle --minify --sourcemap --define:process.env.NODE_ENV='\"production\"'",
     "build:copy:assets": "cpx \"src/assets/**/*\" build/assets/",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "preinstall": "npx npm-force-resolutions"
+    "//preinstall": "npx npm-force-resolutions"
   },
   "repository": {
     "type": "git",
