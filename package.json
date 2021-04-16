@@ -8,11 +8,11 @@
     "clean": "rimraf build",
     "watch": "concurrently \"npm run watch:pug\" \"npm run watch:sass\" \"npm run watch:ts\" \"npm run watch:browser-sync\"",
     "watch:browser-sync": "browser-sync start --config ./bs-config.js",
-    "watch:sass": "npx chokidar \"./src/**/*.sass\" --command \"npm run build:sass\"",
+    "watch:sass": "chokidar \"./src/**/*.sass\" --command \"npm run build:sass\"",
     "watch:pug": "npm run build:pug -- --watch --pretty",
     "build": "run-s clean build:**",
     "build:sass": "sass ./src/index.sass ./build/index.css --style compressed --no-source-map",
-    "watch:ts": "npx chokidar \"./src/**/*.tsx\" --command \"npm run build:ts\"",
+    "watch:ts": "chokidar \"./src/**/*.tsx\" --command \"npm run build:ts\"",
     "//build:autoprefixer": "postcss ./build/index.css -o ./build/index.css --config ./postcss.config.js",
     "build:pug": "pug -O pug_env.js src/ --out ./build/",
     "build:ts": "esbuild ./src/index.tsx --outfile=./build/index.js --bundle --minify --sourcemap --define:process.env.NODE_ENV='\"production\"'",
@@ -48,6 +48,7 @@
     "cpx": "^1.5.0",
     "esbuild": "^0.8.57",
     "eslint": "^7.9.0",
+    "fsevents": "^2.3.2",
     "npm-force-resolutions": "^0.0.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^7.0.27",
@@ -62,6 +63,7 @@
   "resolutions": {
     "minimist": ">=1.2.5",
     "acorn": "^5.7.4",
-    "braces": "^2.3.1"
+    "braces": "^2.3.1",
+    "fsevents": "^2.3.2"
   }
 }
