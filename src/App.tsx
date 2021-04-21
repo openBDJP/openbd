@@ -59,19 +59,17 @@ class App extends Component<Props, State> {
     return (
       <div>
           {this.state.rowFactors ? (
-            <React.Fragment>
-              <div style={{width: this.state.width + '%', margin: '0 auto'}}>
-                <Hiradumi
-                  ref={this.setHiradumi}
-                  data={this.state.items}
-                  size={this.state.size}
-                  margin={this.state.margin}
-                  rowCount={this.state.rowCount}
-                  rowFactors={this.state.rowFactors}
-                  itemComponent={Book}
-                />
-              </div>
-            </React.Fragment>
+            <div style={{width: this.state.width + '%', margin: '0 auto'}}>
+              <Hiradumi
+                ref={this.setHiradumi}
+                data={this.state.items}
+                size={this.state.size}
+                margin={this.state.margin}
+                rowCount={this.state.rowCount}
+                rowFactors={this.state.rowFactors}
+                itemComponent={Book}
+              />
+            </div>
           ) : null}
       </div>
     );
